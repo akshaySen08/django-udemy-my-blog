@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'page-title' %}
+    {{ title }}
+{% endblock 'page-title' %}
+
+{% block 'page-styles' %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}"></link>
+{% endblock 'page-styles' %}
+
+{% block 'page-content' %}
+    <section id='welcome'>
+        <header>
+            <img src="{% static 'blog/images/max.png' %}" alt="Akshay - The author of this blog"/>
+            <h2>Akshay Sen's Blog</h2>
+        </header>
+        <p>Hello this is Akshay I love to code and watch movies.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            {% for post in posts %}
+                {% include 'blog/includes/post.html' %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>
+            What I do ?
+        </h2>
+        <p>I am Full-Stack developer, I love to help other and enoy learning new technologies</p>
+        <p>I am Full-Stack developer, I love to help other and enoy learning new technologies</p>
+        <p>I am Full-Stack developer, I love to help other and enoy learning new technologies</p>
+        <p>I am Full-Stack developer, I love to help other and enoy learning new technologies</p>
+        <p>I am Full-Stack developer, I love to help other and enoy learning new technologies</p>
+        <p>I am Full-Stack developer, I love to help other and enoy learning new technologies</p>
+    </section>
+{% endblock 'page-content' %}

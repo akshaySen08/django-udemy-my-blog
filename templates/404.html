@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block 'page-title' %}
+    404 - Page not found
+{% endblock %}
+
+
+{% block 'page-styles' %}
+    <link rel="stylesheet" href="{% static 'blog/post-details.css' %}">
+{% endblock %}
+
+
+{% block 'page-content' %}
+    <h2>Sorry we couldn't find the page you have requested</h2>
+{% endblock  %}
